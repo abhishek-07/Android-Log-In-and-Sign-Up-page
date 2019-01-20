@@ -13,6 +13,5 @@
     <dimen name="oneeighty">180dp</dimen>
     <dimen name="thirtytwo">32sp</dimen>
     <dimen name="thirtytwosp">32sp</dimen>
-    <dimen name="twentyfivesp">25sp</dimen>
-    <dimen name="twentyfivesp">25sp</dimen>
+    <dimen name="textsize25sp">25sp</dimen>
 </resources>

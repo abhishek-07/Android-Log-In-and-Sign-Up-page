@@ -1,6 +1,7 @@
 package com.example.android.stayhere;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,7 @@ TextView txt1;
             }
         });
         txt1 = (TextView) findViewById(R.id.text1);
-        txt1.setText("Learn Code Online");
+        txt1.setText(R.string.learn_code_online);
     }
 
     public void loginToMainActivity(View view)

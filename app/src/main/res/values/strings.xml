@@ -16,4 +16,9 @@
     <string name="sign_out">Sign Out</string>
     <string name="about_us">About Us</string>
     <string name="login_to_explore">login to explore</string>
+    <string name="email">EMAIL</string>
+    <string name="last_name">LAST NAME</string>
+    <string name="first_name">FIRST NAME</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="learn_code_online">Learn Code Online</string>
 </resources>

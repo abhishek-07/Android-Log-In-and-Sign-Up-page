@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/onesixty"
-        android:background="@drawable/bg_login" />
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/oneeighty"
+        android:layout_marginTop="214dp"
+        android:background="@drawable/bg_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/root1"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/text1"
@@ -23,53 +32,57 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/fifty"
-            android:fontFamily="sans-serif-black"
-            android:textColor="@color/richBlack"
+            android:paddingRight="5dp"
+            android:textColor="@color/colorAccent"
             android:textSize="@dimen/thirtysp"
             android:textStyle="italic" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="@dimen/ten"
+            android:gravity="center"
             android:text="@string/login_to_explore"
-            android:textColor="@color/richBlack"
-            android:textSize="@dimen/twenty"
-            android:gravity="center"/>
+            android:textColor="@color/newpink"
+            android:textSize="@dimen/textsize25sp" />
+
+        <ImageView
+            android:id="@+id/logoOfTheApp"
+            android:layout_width="@dimen/eighty"
+            android:layout_height="@dimen/eighty"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/thirtytwo"
+            android:contentDescription="TODO"
+            android:src="@drawable/loginimage" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/root2"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/root1"
-        android:layout_marginTop="@dimen/fifty"
-        android:orientation="vertical">
+        android:layout_marginTop="165dp"
+        android:layout_marginBottom="157dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.716">
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <android.support.v7.widget.CardView
             android:id="@+id/card_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="414dp"
             android:layout_gravity="center"
-            card_view:cardCornerRadius="4dp"
-            card_view:cardElevation="6dp"
             android:padding="15dp"
-            card_view:cardUseCompatPadding="true">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
 
-            <ImageView
-                android:id="@+id/logoOfTheApp"
-                android:layout_width="@dimen/eighty"
-                android:layout_height="@dimen/eighty"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/thirtytwo"
-                android:src="@drawable/loginimage" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="364dp"
                 android:layout_marginLeft="@dimen/thirty"
                 android:layout_marginTop="@dimen/twenty"
                 android:layout_marginRight="@dimen/thirty"
@@ -81,9 +94,12 @@
                     android:layout_height="@dimen/fourty"
                     android:layout_marginTop="@dimen/ten"
                     android:background="@drawable/edit_text"
+                    android:drawableStart="@drawable/ic_username"
                     android:drawableLeft="@drawable/ic_username"
                     android:elevation="@dimen/five"
                     android:hint="@string/username"
+                    android:inputType=""
+                    android:paddingStart="@dimen/ten"
                     android:paddingLeft="@dimen/ten"
                     android:textColorHint="@color/colorhint" />
 
@@ -93,10 +109,12 @@
                     android:layout_height="@dimen/fourty"
                     android:layout_marginTop="@dimen/twenty"
                     android:background="@drawable/edit_text"
+                    android:drawableStart="@drawable/security"
                     android:drawableLeft="@drawable/security"
                     android:drawablePadding="@dimen/five"
                     android:hint="@string/password"
                     android:inputType="textPassword"
+                    android:paddingStart="@dimen/ten"
                     android:paddingLeft="@dimen/ten"
                     android:textColorHint="@color/colorhint" />
 
@@ -106,6 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/twenty"
                     android:background="@drawable/button_bg"
+                    android:drawableStart="@drawable/ic_signin"
                     android:drawableLeft="@drawable/ic_signin"
                     android:drawablePadding="@dimen/five"
                     android:fontFamily="sans-serif-condensed"
@@ -129,24 +148,8 @@
 
         </android.support.v7.widget.CardView>
     </LinearLayout>
-    <ImageView
-        android:id="@+id/googleimg"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_below="@id/root2"
-        android:elevation="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="50dp"
-        android:padding="10dp"
-        android:src="@drawable/google"
-        android:layout_marginStart="50dp" />
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_below="@id/root2"
-        android:elevation="5dp"
-        android:layout_marginLeft="2dp"
-        android:layout_toRightOf="@id/googleimg"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/github"/>
-</RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
